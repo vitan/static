@@ -3,7 +3,7 @@ function attachment_post() {
   $('#add-requirement').iframePostForm({
     json: true,
     complete: function(response) {
-      if ( response.rc ) {
+      if( response.rc ) {
       } else {
       }
     }
