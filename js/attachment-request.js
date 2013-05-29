@@ -4,8 +4,8 @@ function attachment_post() {
     json: true,
     complete: function(response) {
       if ( response.rc ) {
-    } else {
-    }
+      } else {
+      }
     }
   })
 }
