@@ -5,7 +5,10 @@ function attachment_post() {
     complete: function(response) {
       if( response.rc == 0 ) {
         alert(response.data.success);
+        //TODO Should reset the form by id.
+        $('.add-attachment')[0].reset();
       } else {
+        alert(response.msg.fail);
       }
     }
   })
@@ -21,6 +24,7 @@ function attachment_delete(selector) {
         alert(response.data.success);
       } else {
       }
+        alert(response.msg.fail);
     }
   });
 };
