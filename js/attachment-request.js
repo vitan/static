@@ -22,9 +22,10 @@ function attachment_delete(selector) {
     success: function (response) {
       if ( response.rc == 0 ) {
         alert(response.data.success);
+        $(selector).parent().remove();
       } else {
-      }
         alert(response.msg.fail);
+      }
     }
   });
 };
