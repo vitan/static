@@ -4,8 +4,8 @@ function attachment_post() {
     json: true,
     complete: function(response) {
       if( response.rc == 0 ) {
-        alert(response.data.success);
-        //TODO Should reset the form by id.
+        $('.attachment-list').append(response.data.success);
+        //TODO Should reset the form by id INSTEAD class.
         $('.add-attachment')[0].reset();
       } else {
         alert(response.msg.fail);
